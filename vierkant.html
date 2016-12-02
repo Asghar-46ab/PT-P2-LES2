@@ -1,0 +1,54 @@
+<!DOCTYPE>
+<html lang="nl">
+<head>
+    <meta http-equiv="content-type" content="text/html";
+          charset="utf-8">
+    <title>Vierkant</title>
+    <style>
+        #div{
+            width: auto;
+            height: auto;
+            background: lightgray;
+        }
+        
+        #box {
+            background-color: red;
+        }
+    </style>
+</head>
+    
+    <body>
+        <div id="div">
+            Breedte: <input type="number" id="breedte" onkeyup="myfunction()"> Pixels<br/><br/>
+            
+            Hoogte: <input type="number" id="hoogte" onkeyup="myfunction()"> Pixels<br/><br/>
+        
+            <select id="colors" onchange="color()">
+            <option value="red"> red</option>
+                <option value="yellow"> yellow</option>
+                <option value="green"> green</option>
+                <option value="blue"> blue</option>
+                <option value="gray"> gray</option>
+                <option value="black"> black</option>
+            </select><br/>
+            
+        <div id="box"></div>
+        </div>
+        
+        <script>
+            function myfunction(){
+               var breedte = document.getElementById('breedte').value;
+                var hoogte = document.getElementById('hoogte').value;
+                
+                document.getElementById("box").style.width = breedte;
+                document.getElementById("box").style.height = hoogte;
+            }
+            
+            function color() {
+                document.getElementById("box").style.backgroundColor = document.getElementById("colors").value;
+            }
+            
+        </script>
+    </body>
+
+</html>

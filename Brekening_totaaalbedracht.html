@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html lang="nl">
+<head>
+    <meta http-equiv="content-type" content="text/html";
+          charset="utf-8">
+    <title>Bedracht</title>
+    
+    <style>
+        #box{
+            background-color: lightgrey;
+            height: 250px;
+            width: 250px;
+        }
+        
+        #uitkomst{
+            width: 100px;
+            height: 20px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+    
+    <body>
+      <div id="box"><br/>
+              
+            bedracht per stuk:<input id="bedracht" type="number"><br/><br/>
+
+            Aantal:<input type="number" id="aantal">
+            <br/><br/>
+          
+            <button onclick="myfunction()">breken</button>
+            <br/><br/>
+          
+          Totaal:<div id="uitkomst"></div>
+      </div>
+        
+        <script>
+            function myfunction(){
+            var bedracht = document.getElementById('bedracht').value;
+            
+            var aantal = document.getElementById('aantal').value;
+            
+            var uitkomst=bedracht*aantal;
+                
+            document.getElementById('uitkomst').innerHTML=(uitkomst.toFixed(2));
+            }
+        </script>
+    
+    </body>
+
+</html>
